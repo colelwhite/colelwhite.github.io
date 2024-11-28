@@ -22,7 +22,7 @@
    L.control.attribution({prefix: false}).addTo(map);
    
    <!-- this line was produced by the Generate XYZ Tiles tool -->
-   var tilesource_layer = L.tileLayer('file://///utl.utoronto.ca/Staff/Data/whiteco7/Desktop/qgis_tiles/{z}/{x}/{y}.png', {minZoom: 12, maxZoom: 12, tms: false, attribution: 'Created by QGIS'}).addTo(map);
+   var tilesource_layer = L.tileLayer('{z}/{x}/{y}.png', {minZoom: 12, maxZoom: 12, tms: false, attribution: 'Created by QGIS'}).addTo(map);
    
    <!-- the following lines are from the qgis2web plugin -->
 	      var layer_Neighbourhoods4326_0 = new L.geoJson(json_Neighbourhoods4326_0, {
