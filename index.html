@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Leaflet preview</title>
+   <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"integrity="sha384-o/2yZuJZWGJ4s/adjxVW71R+EO/LyCwdQfP5UWSgX/w87iiTXuvDZaejd3TsN7mf"crossorigin=""/>
+
+   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"integrity="sha384-okbbMvvx/qfQkmiQKfd5VifbKZ/W8p1qIsWvE1ROPUfHWsDcC8/BnHohF7vPg2T6"crossorigin=""></script>
+   
+   <!-- The line below points to the geoJson data -->
+   <script src="data/Neighbourhoods4326_0.js"></script>
+
+   <style type="text/css">
+      body {margin: 0;padding: 0;} html, body, #map{width: 100%;height: 100%;}
+   </style>
+</head>
+
+<body>
+   <div id="map"></div>
+
+   <script>
+   var map = L.map('map', {attributionControl: false}).setView([43.7016, -79.3864], 12);
+   L.control.attribution({prefix: false}).addTo(map);
+   
+   <!-- this line was produced by the Generate XYZ Tiles tool -->
+   var tilesource_layer = L.tileLayer('file://///utl.utoronto.ca/Staff/Data/whiteco7/Desktop/qgis_tiles/{z}/{x}/{y}.png', {minZoom: 12, maxZoom: 12, tms: false, attribution: 'Created by QGIS'}).addTo(map);
+   
+   <!-- the following lines are from the qgis2web plugin -->
+	      var layer_Neighbourhoods4326_0 = new L.geoJson(json_Neighbourhoods4326_0, {
+               attribution: '',
+               interactive: true,
+               layerName: 'layer_Neighbourhoods4326_0',
+           });
+		
+		   map.addLayer(layer_Neighbourhoods4326_0);
+
+</script>
+</body>
+</html>
