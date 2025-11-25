@@ -3,9 +3,9 @@ const one_day = 1440;
 const config = {
   title: "ukraine",
   display_title: "Civilian Harm\nin Ukraine",
-  SERVER_ROOT: "https://bellingcat-embeds.ams3.cdn.digitaloceanspaces.com/production/ukr",
-  EVENTS_EXT: "/timemap/events.json",
-  SOURCES_EXT: "/timemap/sources.json",
+  SERVER_ROOT: "https://colelwhite.github.io/",
+  EVENTS_EXT: "/data/events.json",
+  SOURCES_EXT: "/data/sources.json",
   ASSOCIATIONS_EXT: "/timemap/associations.json",
   API_DATA: "https://bellingcat-embeds.ams3.cdn.digitaloceanspaces.com/production/ukr/timemap/api.json",
   MAPBOX_TOKEN:
